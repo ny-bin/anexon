@@ -1,23 +1,17 @@
-/* eslint-disable new-cap */
-import {NgModule} from '@angular/core';
-import {BrowserModule} from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
 
-import {AppRoutingModule} from './app-routing.module';
-import {AppComponent} from './app.component';
-import {NavbarComponent} from './common/navbar/navbar.component';
-import {ProductListComponent} from './product-list/product-list.component';
-// eslint-disable-next-line max-len
-import {ProductDetailComponent} from './product-detail/product-detail.component';
+import { AppRoutingModule } from './app-routing.module';
+import { AppComponent } from './app.component';
+import { NavbarComponent } from './common/navbar/navbar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
-    ProductListComponent,
-    ProductDetailComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule],
+  imports: [BrowserModule, AppRoutingModule,],
   providers: [],
   bootstrap: [AppComponent],
 })
-export class AppModule {}
+export class AppModule { }
