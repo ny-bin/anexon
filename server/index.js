@@ -13,14 +13,14 @@ mongoose.connect(config.DB_URI, {
     () => {
         if (process.env.NODE_ENV !== 'production') {
             const fakeDb = new FakeDb()
-            fakeDb.initDb();
+            // fakeDb.initDb();
         }
     }
 )
 
 app.use('/api/v1/product', productRoute)
 
-if (process.env.NODE_ENV !== 'production') {
+if (process.env.NODE_ENV === 'production') {
     const appPath = path.join(__dirname, '..', 'dist', 'anexon')
     app.use(express.static(appPath))
     app.get("*", function (req, res) {
